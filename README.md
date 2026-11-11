@@ -4,9 +4,15 @@ A clickable prototype of a system for a Sri Lankan importer: buy from overseas s
 
 > **This is a frontend-only prototype.** There is no server and no database. Everything you enter is kept in your browser (localStorage) and starts from realistic sample data. See [DOCUMENT.md](DOCUMENT.md) for the full specification and [PLAN.md](PLAN.md) for the build plan.
 
+## Live demo
+
+**https://hadesreality.github.io/import-and-trade-management-system-design/**
+
+It is rebuilt and published automatically by GitHub Actions ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)) every time `main` is updated. The user guide is at `/docs` on the same site.
+
 ## Run it
 
-Requires Node.js 20 or newer.
+Requires Node.js 20.19 or newer (22 recommended).
 
 ```bash
 npm install
@@ -24,6 +30,14 @@ Other commands:
 | `npm run typecheck` | Type-checks only |
 
 The built `dist/` folder is plain static files, so it can be hosted anywhere (Netlify, Vercel, GitHub Pages, any web server).
+
+**Hosting under a sub-path** (as GitHub Pages does for project sites) — set `BASE_PATH` when building, and serve `index.html` for unknown paths so direct links like `/docs` open:
+
+```bash
+BASE_PATH=/my-repo-name/ npm run build   # then copy dist/index.html to dist/404.html on GitHub Pages
+```
+
+Without `BASE_PATH` the app is built for the site root, which is what `npm run dev` and `npm run build` use locally.
 
 ## What's in it
 

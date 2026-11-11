@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.tsbuildinfo
+.vite/
+
+# Environment files — never commit secrets. (This project needs none today;
+# if you add any, copy them from a committed .env.example instead.)
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test and coverage output
+coverage/
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.suo
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local tooling (Claude Code, scratch files)
+.claude/
+.scratch/
